@@ -84,4 +84,4 @@ def run_script(link,email,minutes):
     #s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
     #s.quit()
     print("ok")
-    time.sleep(minutes*60)
+    time.sleep(int(minutes)*60)
