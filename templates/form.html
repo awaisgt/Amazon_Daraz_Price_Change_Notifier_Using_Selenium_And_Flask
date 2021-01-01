@@ -1,0 +1,90 @@
+<style>
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f6f6f6;
+}
+.studentlogin{
+  width: 300px;
+  padding: 40px;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  display: block;
+    border-radius: 5%;
+  background: #393e46;
+  text-align: center;
+}
+.studentlogin h1{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.username,.password{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.username:hover,.password:hover{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.submit{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.submit:hover{
+  background: #2ecc71;
+}
+
+img{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5%;
+}
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Price Tracker</title>
+    <link rel="stylesheet" href="studentlogin.css">
+  </head>
+  <body>
+
+<form class="studentlogin" " method="POST">
+  <h1>Price Tracker</h1>
+  <input class="username" type="text" name="username" placeholder="Link">
+  <input class="password" type="text" name="password" placeholder="Email">
+  <input class="password" type="text" name="minutes" placeholder="Send Email After .. Minutes">
+                                                                        
+  <input class="submit" type="submit" name="" value="Track Price">
+</form>
+
+
+  </body>
+</html>
