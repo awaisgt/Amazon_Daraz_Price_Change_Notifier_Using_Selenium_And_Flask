@@ -1,0 +1,91 @@
+<style>
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f6f6f6;
+}
+.studentlogin{
+  width: 100%;
+  padding: 40px;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  display: block;
+    border-radius: 5%;
+  background: #393e46;
+  text-align: center;
+}
+.studentlogin h1{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.email,.link,.minutes{
+  widht:50%
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.submit{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.submit:hover{
+  background: #2ecc71;
+}
+
+img{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5%;
+}
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PRICE TRACKER</title>
+    <link rel="stylesheet" href="studentlogin.css">
+  </head>
+  <body>
+
+<form class="studentlogin" action="index.html" method="post">
+  <h5 style = "color:#ff570c"> 	{{txt}} </h5>
+  <h1>PRICE TRACKER</h1>
+  <p style ="color:white">Link</p>
+  <p class="link"> {{username}} </p>
+    <p style ="color:white">Email</p>
+  <p class="email" > {{password}} </p>
+      <p style ="color:white">Send Email After ... Minutes</p>
+  <p class="minutes" > {{minutes}} </p>
+  
+</form>
+
+
+  </body>
+</html>
