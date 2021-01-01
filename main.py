@@ -14,7 +14,7 @@ def my_form_post():
         file = open("abc.txt",'w')
         strx = link+ "\n" + email+"\n"+minutes
         file.write(strx)
-        myselenium(link,email,minutes)
+        myselenium.run_script(link,email,minutes)
         return render_template('show.html', username=link ,password = email ,minutes = minutes, txt = "You will soon receive the confirmation email." )
 
 
