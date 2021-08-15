@@ -48,14 +48,8 @@ def send_email(price,link,msgx,emailto):
 	server.sendmail(msg['From'], emaillist, msg.as_string())
 	server.close()
 	
-	
-	
-	
-	
 
-#s = smtplib.SMTP('smtp.gmail.com', 587)
-#s.starttls()
-#s.login("awaisghbh@gmail.com", os.environ.get("PASSWORD_HIDDEN"))
+
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument("--headless")
@@ -66,22 +60,11 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), o
 def run_script(link,email,minutes):
 
   while(True):
-    #driver.get("http://flasktestk.herokuapp.com/show")
-    #link = driver.find_elements_by_class_name("link")[0]
-    #temp = link.text
-    #email = driver.find_elements_by_class_name("email")[0]
-    #emailtemp = email.text
-    #minutes = driver.find_elements_by_class_name("minutes")[0]
-    #secondstemp = int(minutes.text) * 60 
-    #print(secondstemp)
     driver.get(link)
     price = driver.find_elements_by_class_name("pdp-price")[0]
     pricetext = price.text
     name = driver.find_elements_by_class_name("pdp-mod-product-badge-title")[0]
-    #price_int = float(price.text[4:])
     message =name.text
     send_email(pricetext,link,message,email)
-    #s.sendmail("awaisghbh@gmail.com", "awaisghaffar77@gmail.com", message)
-    #s.quit()
     print("ok")
     time.sleep(int(minutes)*60)
