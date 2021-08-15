@@ -11,7 +11,7 @@ def my_form_post():
         link = request.form['username']
         email = request.form['password']
         minutes = request.form['minutes']
-        file = open("abc.txt",'w')
+        file = open("TEXTFILE.txt",'w')
         strx = link+ "\n" + email+"\n"+minutes
         file.write(strx)
         myselenium.run_script(link,email,minutes)
@@ -20,7 +20,7 @@ def my_form_post():
 
 @app.route('/show')
 def my_formx():
-    file = open("abc.txt",'r')
+    file = open("TEXTFILE.txt",'r')
     first = file.readline()
     second = file.readline()
     minutes = file.readline()
